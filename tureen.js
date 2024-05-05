@@ -8,7 +8,11 @@
 ^http[s]?:\/\/league-api.huazhuanapp.com\/api\/v1\/wallpaper\/generator\/vip\/info url script-response-body https://raw.githubusercontent.com/SNKrock/3430460/main/twzs.js
 ^http:\/\/league-api\.huazhuanapp\.com\/api\/v1\/service\/cost? url script-response-body https://raw.githubusercontent.com/Hmiwy/tuiwen/main/tureen.js
 
+[mitm] 
 
+hostname = league-api.huazhuanapp.com
+
+*******************************/
 /*const body = $response.body.replace(/"vipPoints":\d+/g,'"vipPoints":999999999')
 .replace(/"permanentPoint":\d+/g,'"permanentPoint":999999999')
 .replace(/"showVipAlert":\w+/g,'"showVipAlert":true')
