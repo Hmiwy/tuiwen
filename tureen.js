@@ -6,7 +6,7 @@
 
 ^http[s]?:\/\/league-api.huazhuanapp.com\/api\/v1\/user\/permanentPoints? url script-response-body https://raw.githubusercontent.com/Hmiwy/tuiwen/main/tureen.js
 ^http[s]?:\/\/league-api.huazhuanapp.com\/api\/v1\/wallpaper\/generator\/vip\/info url script-response-body https://raw.githubusercontent.com/SNKrock/3430460/main/twzs.js
-^http:\/\/league-api\.huazhuanapp\.com\/api\/v1\/service\/cost\? url script-response-body https://raw.githubusercontent.com/Hmiwy/tuiwen/main/tureen.js
+^http:\/\/league-api\.huazhuanapp\.com\/api\/v1\/service\/cost? url script-response-body https://raw.githubusercontent.com/Hmiwy/tuiwen/main/tureen.js
 *******************************/
 
 /*const body = $response.body.replace(/"vipPoints":\d+/g,'"vipPoints":999999999')
