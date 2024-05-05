@@ -6,9 +6,7 @@
 
 ^http[s]?:\/\/league-api.huazhuanapp.com\/api\/v1\/user\/permanentPoints? url script-response-body https://raw.githubusercontent.com/Hmiwy/tuiwen/main/tureen.js
 ^http[s]?:\/\/league-api.huazhuanapp.com\/api\/v1\/wallpaper\/generator\/vip\/info url script-response-body https://raw.githubusercontent.com/SNKrock/3430460/main/twzs.js
-
-hostname = league-api.huazhuanapp.com
-
+^http:\/\/league-api\.huazhuanapp\.com\/api\/v1\/service\/cost\? url script-response-body https://raw.githubusercontent.com/Hmiwy/tuiwen/main/tureen.js
 *******************************/
 
 /*const body = $response.body.replace(/"vipPoints":\d+/g,'"vipPoints":999999999')
@@ -44,4 +42,5 @@ var body = $response.body.replace(/"price":\d+/g,'"price":0')
 .replace(/"coins":\d+/g,'"coins":99999999')
 .replace(/"showVipAlert":\w+/g,'"showVipAlert":true')
 .replace(/"vipStatus":\d/g,'"vipStatus":1')
+.repalce(/"currentMoney":\d+/g,'"currentMoney":9999')
   $done({ body });                                 
