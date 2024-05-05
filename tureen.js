@@ -12,8 +12,8 @@ hostname = league-api.huazhuanapp.com
 
 *******************************/
 
-var body = $response.body.replace(/"vipPoints":\d+/g,'"vipPoints":999999999')
-.replace(/"permanentPoint":\d+/g,'"permanentPoint":999999999')
+const body = $response.body.replace(/"vipPoints":\d+/g,'"vipPoints":999999999')
+.replace(/"permanentPoint":0,'"permanentPoint":999999999')
 .replace(/"showVipAlert":\w+/g,'"showVipAlert":true')
 .replace(/"vipDesc":".*?"/g,'"vipDesc":"会员有效期至：2999-09-09 19:19"')
 .replace(/"mobile":".*?"/g,'"mobile":"139****8888(年卡会员)"')
