@@ -4,7 +4,7 @@
 
 [rewrite_local]
 
-^http[s]?:\/\/league-api.huazhuanapp.com\/api\/v1\/wallpaper\/generator\/vip\/info url script-response-body https://raw.githubusercontent.com/SNKrock/3430460/main/twzs.js
+^http[s]?:\/\/league-api.huazhuanapp.com\/api\/v1\/user\/permanentPoints? url script-response-body https://raw.githubusercontent.com/SNKrock/3430460/main/twzs.js
 
 [mitm] 
 
@@ -33,7 +33,6 @@ $done({ body });
   "vipPointDesc" : "会员每日赠送会员积分，每日24点重置"*/
 
 
-var body = $response.body.replace(/"vipDetailDesc" : "每日24点重置",'""')
-                                  .replace(/"permanentPointDesc" : "永久积分长期有效，不使用不会消耗，不会重置清零",'""')
-                                  .replace(/"price":\d+/g,'"price":0') 
-                                  .replace(/"permanentPoint":\d+/g,'"permanentPoint":9999')
+var body = $response.body.replace(/"price":\d+/g,'"price":0') 
+ .replace(/"permanentPoint":\d+/g,'"permanentPoint":9999')
+  $done({ body });                                 
