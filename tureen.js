@@ -5,8 +5,7 @@
 [rewrite_local]
 
 ^http[s]?:\/\/league-api.huazhuanapp.com\/api\/v1\/user\/permanentPoints? url script-response-body https://raw.githubusercontent.com/Hmiwy/tuiwen/main/tureen.js
-
-[mitm] 
+^http[s]?:\/\/league-api.huazhuanapp.com\/api\/v1\/wallpaper\/generator\/vip\/info url script-response-body https://raw.githubusercontent.com/Hmiwy/tuiwen/main/tureen.js
 
 hostname = league-api.huazhuanapp.com
 
@@ -35,4 +34,13 @@ $done({ body });
 
 var body = $response.body.replace(/"price":\d+/g,'"price":0') 
  .replace(/"permanentPoint":\d+/g,'"permanentPoint":9999')
+.replace(/"showVipAlert":\w+/g,'"showVipAlert":true')
+.replace(/"vipDesc":".*?"/g,'"vipDesc":"会员有效期至：2999-09-09 19:19"')
+.replace(/"mobile":".*?"/g,'"mobile":"139****8888(年卡会员)"')
+.replace(/"coins":\d+/g,'"coins":99999999999')
+.replace(/"vipDesc":".*?"/g,'"vipDesc":"会员有效期至：2099-09-09 14:38"')
+.replace(/"mobile":".*?"/g,'"mobile":"139****9999(年卡会员)"')
+.replace(/"coins":\d+/g,'"coins":99999999')
+.replace(/"showVipAlert":\w+/g,'"showVipAlert":true')
+.replace(/"vipStatus":\d/g,'"vipStatus":1')
   $done({ body });                                 
