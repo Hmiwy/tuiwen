@@ -4,7 +4,7 @@
 
 [rewrite_local]
 
-^http[s]?:\/\/league-api.huazhuanapp.com\/api\/v1\/user\/permanentPoints? url script-response-body https://raw.githubusercontent.com/SNKrock/3430460/main/twzs.js
+^http[s]?:\/\/league-api.huazhuanapp.com\/api\/v1\/user\/permanentPoints? url script-response-body https://raw.githubusercontent.com/Hmiwy/tuiwen/main/tureen.js
 
 [mitm] 
 
