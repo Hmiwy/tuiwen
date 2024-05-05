@@ -33,6 +33,7 @@ $done({ body });
 
 
 var body = $response.body.replace(/"price":\d+/g,'"price":0') 
+  .replace(/"vipPoints":\d+/g,'"vipPoints":999999999')
  .replace(/"permanentPoint":\d+/g,'"permanentPoint":9999')
 .replace(/"showVipAlert":\w+/g,'"showVipAlert":true')
 .replace(/"vipDesc":".*?"/g,'"vipDesc":"会员有效期至：2999-09-09 19:19"')
