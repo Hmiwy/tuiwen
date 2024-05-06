@@ -25,14 +25,17 @@ hostname = ai.y56.cc
   "code" : 1
 }
 */
-var chxm1023 = JSON.parse($response.body);
-chxm1023={
-  ...chxm1023,
-  "isaudit" : true,
-  "iospay" : true,
-    "viptime" : "2099-12-12",
-    "cion" : "99999"
-     "vip" : "1",
-  "daycion" : 99999,  
-};
-$done({body : JSON.stringify(chxm1023)});
+// var chxm1023 = JSON.parse($response.body);
+// chxm1023={
+//   ...chxm1023,
+//   "isaudit" : true,
+//   "iospay" : true,
+//     "viptime" : "2099-12-12",
+//     "cion" : "99999"
+//      "vip" : "1",
+//   "daycion" : 99999,  
+// };
+// $done({body : JSON.stringify(chxm1023)});
+
+var body = $response.body.replace(/"vip":\d/g,'"vip":1')
+.replace(/"cion":\"\d/g\",'"cion":"99999"')
