@@ -2,7 +2,7 @@
 
 
 [rewrite_local]
-^http:\/\/api\.tuiwenzhushou\.top\/user\/ url script-response-body 
+^http:\/\/api\.tuiwenzhushou\.top\/user\/ url script-response-body https://raw.githubusercontent.com/Hmiwy/tuiwen/main/tureen.js
 [mitm] 
 hostname = api.tuiwenzhushou.top
 *******************************/
