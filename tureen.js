@@ -28,6 +28,6 @@ hostname = api.tuiwenzhushou.top
 (/"vipPoints":\d+/g,'"vipPoints":999999999')
 */
 var body = $response.body.replace(/"is_vip":\d+/g,'"is_vip":1')
-.replace(/"vip_end_time":\d+/g,'"vip_end_time":2099-12-12')
+.replace(/"vip_end_time":.*?"/g,'"vip_end_time":2099-12-12')
 $done({ body });
 
