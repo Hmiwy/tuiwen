@@ -35,4 +35,5 @@ chxm1023={
      "vip" : "1",
   "daycion" : 99999,
   }
-}
+};
+$done({body : JSON.stringify(chxm1023)});
