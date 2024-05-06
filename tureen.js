@@ -27,7 +27,19 @@ hostname = api.tuiwenzhushou.top
 }
 (/"vipPoints":\d+/g,'"vipPoints":999999999')
 */
-var body = $response.body.replace(/"is_vip":\d+/g,'"is_vip":1')
-.replace(/"vip_end_time":.*?"/g,'"vip_end_time":2099-12-12')
-$done({ body });
 
+
+var chxm1023 = JSON.parse($response.body);
+
+chxm1023 = {
+  ...chxm1023,
+"data" : {
+   "vip_type" : 1,
+    "reg_pay" : 1,
+    "is_vip" : 1,
+    "vip_end_time" : 2099-12-12,
+  },
+  "code" : 0
+};
+
+$done({body : JSON.stringify(chxm1023)});
