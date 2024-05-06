@@ -1,7 +1,7 @@
 /*
 [rewrite_local]
 
-^http:\/\/ai\.y56\.cc\/index\.php\/ai\/apiv2\/user\/index url script-response-body 
+^http:\/\/ai\.y56\.cc\/index\.php\/ai\/apiv2\/user\/index url script-response-body https://raw.githubusercontent.com/Hmiwy/tuiwen/main/tuiwen.js
 
 [mitm]
 hostname = ai.y56.cc 
