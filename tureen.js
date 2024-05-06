@@ -1,11 +1,9 @@
 /*******************************
 
-*******************************
 
 [rewrite_local]
 ^http:\/\/api\.tuiwenzhushou\.top\/user\/ url script-response-body 
 [mitm] 
-
 hostname = api.tuiwenzhushou.top
 *******************************/
                                
