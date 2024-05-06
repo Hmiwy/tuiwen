@@ -39,3 +39,4 @@ hostname = ai.y56.cc
 
 var body = $response.body.replace(/"vip":\d/g,'"vip":1')
 .replace(/"cion":\"\d/g\",'"cion":"99999"')
+$done({ body });
